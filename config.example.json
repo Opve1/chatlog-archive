@@ -1,0 +1,31 @@
+{
+  "_说明": "复制本文件为 config.json 再填。所有路径用绝对路径，Windows 下用双反斜杠或正斜杠都可以。",
+
+  "wechat": {
+    "db_dir": "D:/xwechat_files/wxid_example_abcd/db_storage",
+    "_db_dir_怎么找": "登录微信 4.0 后，在 设置-文件管理 里看保存位置；进去找 xwechat_files\\<你的wxid>_xxxx\\db_storage",
+    "self_wxid": "",
+    "_self_wxid": "留空则自动从 db_dir 的目录名里提取（形如 wxid_xxxx_abcd）。提取不对再手填。",
+    "keys_path": "",
+    "_keys_path": "留空 = work/wechat/keys.json"
+  },
+
+  "qq": {
+    "db_dir": "D:/QQ/123456789/nt_qq/nt_db",
+    "_db_dir_怎么找": "QQ 9.9 安装目录下 QQ\\<你的QQ号>\\nt_qq\\nt_db，里面应有 nt_msg.db",
+    "self_uin": 0,
+    "_self_uin": "0 = 自动从 db_dir 的上级目录名推断（目录名就是 QQ 号）",
+    "self_uid": "",
+    "_self_uid": "留空则用 self_uin 在 nt_uid_mapping_table 里反查；导出时判断哪条是「我」需要它",
+    "key_path": "",
+    "_key_path": "留空 = work/qq/key.json（由 10_scan_memory.py 生成）"
+  },
+
+  "work_dir": "./work",
+
+  "safety": {
+    "read_only": true,
+    "_read_only": "永远只读原始库，不要改这里",
+    "skip_zero_timestamp": true
+  }
+}

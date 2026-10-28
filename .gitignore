@@ -1,0 +1,23 @@
+# 本地产物：绝对不要提交
+config.json
+work/
+vendor/
+*.log
+
+# 钥匙 / 密钥 —— 泄露等于泄露全部聊天记录
+keys.json
+key.json
+candidates.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
